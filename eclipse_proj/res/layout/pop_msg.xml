@@ -1,0 +1,23 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_popwindow" android:layout_width="wrap_content" android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/popmsg_imgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="3dp"
+            android:src="@drawable/ic_dollar" />
+
+        <TextView
+            android:id="@+id/popmsg_txtMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/c_andblue" />
+
+    </LinearLayout>

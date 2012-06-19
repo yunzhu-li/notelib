@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <style name="s_topbar_text">
+            <item name="android:textColor">@color/c_elist_item_bg</item>    	
+    		<item name="android:shadowColor">#55000000</item>
+            <item name="android:shadowDx">1</item>
+            <item name="android:shadowDy">1</item>
+            <item name="android:shadowRadius">2</item>
+            <item name="android:textSize">17sp</item>
+        </style>
+        <style name="s_common_edittext">
+            <item name="android:textColor">@color/c_darkgray</item>
+            <item name="android:background">@drawable/bg_common_edittext</item>
+        </style>
+        
+        <style name="s_common_checkbox">
+            <item name="android:textColor">@color/c_nextdarkgray</item>
+            <item name="android:button">@drawable/s_chkbtn_common</item>
+            
+        </style>
+        
+        
+        
+    </resources>
+
+    
+    
+    
+    
+    
+    

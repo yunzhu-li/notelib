@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popwindow"
+    android:orientation="vertical" android:layout_gravity="center_vertical|center_horizontal" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top" >
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/main_about"
+            android:paddingLeft="5dp"
+            android:paddingRight="7dp"
+            android:src="@drawable/ic_settings" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/settings_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/c_andblue" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="15dip"
+        android:contentDescription="@string/main_about"
+        android:paddingBottom="2dip"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:paddingTop="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_popwindow_divider" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:text="@string/settings_auto_load_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/c_andblue"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:id="@+id/popSettings_chkAutoLoadImages"
+        style="@style/s_common_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/settings_auto_load_images" />
+
+    <CheckBox
+        android:id="@+id/popSettings_chkAutoLoadThumbs"
+        style="@style/s_common_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/settings_auto_load_thumbs" />
+
+    <Button
+        android:id="@+id/popSettings_btnOK"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/s_btn_common_selector"
+        android:padding="2dip"
+        android:text="@string/app_common_ok"
+        android:textColor="@color/c_white"
+        android:textSize="17sp" />
+
+</LinearLayout>

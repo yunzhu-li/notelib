@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" android:background="@drawable/bgc_elist_bg">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/all_topbar" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_banknote_white" 
+            android:paddingLeft="4dp" 
+            android:paddingRight="4dp"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/s_topbar_text"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <ImageView
+            android:id="@+id/NLMainAct_btnHelp"
+            style="@style/s_topbar_text"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/s_btn_topbarbtn_selector"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="0dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_help" />
+
+        <ImageView
+            android:id="@+id/NLMainAct_btnSettings"
+            style="@style/s_topbar_text"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/s_btn_topbarbtn_selector"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="0dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_topbar_settings" />
+
+        <Button
+            android:id="@+id/NLMainAct_btnExit"
+            style="@style/s_topbar_text"
+            android:layout_width="54dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/s_btn_topbarbtn_selector"
+            android:paddingBottom="0dip"
+            android:paddingLeft="9dip"
+            android:paddingRight="9dip"
+            android:paddingTop="0dip"
+            android:text="@string/main_exit" />
+
+    </LinearLayout>
+    
+    <include
+        android:id="@+id/NLMainAct_incSearchbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/inc_bar_search" />
+
+    <include
+        android:id="@+id/NLMainAct_incFeedbackBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/inc_bar_feedback" />
+    
+    <ListView
+        android:id="@+id/lstMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:listSelector="@drawable/s_lst_list_main_selector"
+        android:cacheColorHint="#00000000" 
+        android:alwaysDrawnWithCache="true" 
+        android:divider="@color/c_elist_divider" 
+        android:dividerHeight="0.5dp" 
+        android:paddingLeft="8dip" 
+        android:paddingRight="12dip" 
+        android:paddingTop="1dip" 
+        android:paddingBottom="0dip" 
+        android:background="@drawable/bg_list_topedge" 
+        android:fadingEdge="none">
+    </ListView>
+
+</LinearLayout>

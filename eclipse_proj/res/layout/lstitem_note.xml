@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp" >
+
+    <ImageView
+        android:id="@+id/lstNotesItem_imgLastVisited"
+        android:layout_width="3dp"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/app_name"
+        android:src="@color/c_transparent"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/lstNotesItemIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="0dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="14dp"
+        android:paddingTop="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_banknote" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lstNotesItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/c_darkgray"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/lstNotesItemID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/c_transparent"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lstNotesItemSubtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_network_loading"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/c_nextdarkgray" />
+
+            <TextView
+                android:id="@+id/lstNotesItemSubtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7dp"
+                android:text="@string/common_network_loading"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/c_nextdarkgray" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

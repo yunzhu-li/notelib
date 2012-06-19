@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" android:paddingTop="7dp" android:paddingBottom="7dp">
+
+    <ImageView
+        android:id="@+id/lstMainItemIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" android:contentDescription="@string/app_name" android:paddingRight="9dp" android:paddingLeft="4dp" android:paddingBottom="0dp" android:paddingTop="0dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lstMainItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/c_darkgray" />
+
+        <TextView
+            android:id="@+id/lstMainItemSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_aboutsub"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/c_nextdarkgray" />
+
+    </LinearLayout>
+
+</LinearLayout>

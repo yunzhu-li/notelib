@@ -1,0 +1,68 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" android:paddingLeft="2dp" android:paddingRight="2dp">
+
+        <ImageView
+            android:id="@+id/common_feedbackbar_btnUP"
+            android:layout_width="36dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="0dp"
+            android:background="@drawable/s_btn_common_selector"
+            android:clickable="true"
+            android:contentDescription="@string/common_search_search"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_searchbar_up" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/common_feedbackbar_txtFeedback"
+                style="@style/s_common_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="1dp"
+                android:cursorVisible="true"
+                android:ems="7"
+                android:fadingEdge="none"
+                android:hint="@string/main_feedback_hint" android:layout_marginBottom="2dp" android:gravity="top|left">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/common_feedbackbar_txtContact"
+                style="@style/s_common_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="1dp"
+                android:cursorVisible="true"
+                android:ems="7"
+                android:fadingEdge="none"
+                android:hint="@string/main_feedback_contact_hint" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/common_feedbackbar_btnSubmit"
+            android:layout_width="54dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/s_btn_common_selector"
+            android:text="@string/main_feedback_submit"
+            android:textColor="@color/c_white"
+            android:textSize="17sp" />
+
+    </LinearLayout>

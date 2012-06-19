@@ -1,0 +1,24 @@
+
+    <resources>
+        <color name="c_transparent">#00000000</color>
+        <color name="c_splash_bg">#FF55ADEB</color>
+        <color name="c_lightgray">#EEEEEE</color>
+        <color name="c_white">#FFFFFF</color>
+        <color name="c_black">#000000</color>
+        <color name="c_darkgray">#333333</color>
+        <color name="c_nextdarkgray">#666666</color>
+        <color name="c_nextlightgray">#D7D7D7</color>
+        <color name="c_andblue">#0099CC</color>
+        <color name="c_andorange">#FF8800</color>
+        <color name="c_topbar_btn_press">#000000</color>
+        <color name="c_elist_bg">#F2F2F2</color>
+        <color name="c_elist_divider">#C7C7C7</color>
+        <color name="c_elist_grp_bg">#E1EBF2</color>
+        <color name="c_elist_grp_press">#CEE2F5</color>
+        <color name="c_elist_item_bg">#F2F2F2</color>
+        <color name="c_elist_item_press">#B5E3FF</color>
+        
+    </resources>
+
+    
+    

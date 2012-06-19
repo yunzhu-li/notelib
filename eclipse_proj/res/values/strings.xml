@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">纸币图鉴</string>
+    <string name="app_ver">1.21</string>
+    <string name="app_builddate"> [ build 120518 ]</string>
+    <string name="app_common_back">返回</string>
+    <string name="app_common_close">关闭</string>
+    <string name="app_common_ok">确定</string>
+    
+    <string name="welcome_newstaff">1.21版更新内容：\n1.修复某些情况下获取数据不完整的问题</string>
+    
+    <string name="common_search_new">最新</string>
+    <string name="common_search_search">搜索</string>
+    <string name="common_search_hint">输入关键字</string>
+    <string name="common_search_nokeywords">请输入关键字</string>
+    <string name="common_search_result">检索结果</string>
+    <string name="common_search_result_num">结果数：</string>
+    <string name="common_search_result_0">检索结果：</string>
+    <string name="common_search_result_1"> 条</string>
+    <string name="common_search_result_200">检索结果超过300条，只显示前300条</string>
+    <string name="common_search_noresult">没有检索结果，请修改关键字再试\n(关键字可为国家名、面值等)</string>
+
+    <string name="common_network_connecting">正在请求数据…</string>
+    <string name="common_network_loading">正在请求数据…</string>
+    <string name="common_network_network_err">数据加载失败</string>
+    
+    <string name="main_exit">退出</string>
+    <string name="main_search">纸币检索</string>
+    <string name="main_searchsub">检索纸币数据库</string>
+    <string name="main_catalog">纸币目录</string>
+    <string name="main_catalogsub">浏览完整目录</string>
+    <string name="main_bookmarks">我的书签</string>
+    <string name="main_bookmarkssub">查看我的纸币书签</string>
+    <string name="main_ybnotes">世界纸钞网</string>
+    <string name="main_ybnotessub">访问世界纸钞网手机版</string>
+    <string name="main_ybnotesurl">http://www.ybnotes.com/e/wap</string>
+    <string name="main_feedback">意见反馈</string>
+    <string name="main_feedbacksub">欢迎提出任何意见和建议</string>
+    <string name="main_about">关于 纸币图鉴</string>
+    <string name="main_aboutsub">关于本应用和开发者信息</string>
+    
+    <string name="main_update">在线更新</string>
+    <string name="main_updatesub">当前版本：</string>
+    <string name="main_update_checking">正在检查更新…</string>
+    <string name="main_update_network_err">检查更新失败，请检查网络连接</string>
+    <string name="main_update_latest">已更新到最新版本\n</string>
+    <string name="main_update_needupdate">发现新版本：</string>
+    <string name="main_update_whetherupdate">\n现在更新吗？</string>
+    <string name="main_update_yes">更新</string>
+    <string name="main_update_no">不更新</string>
+    
+    <string name="main_feedback_hint">写下你的建议：</string>
+    <string name="main_feedback_contact_hint">你的联系方式(选填)：</string>
+    <string name="main_feedback_noinput">请输入你的建议^_^</string>
+    <string name="main_feedback_submitting">正在提交中…</string>
+    <string name="main_feedback_submitted">提交成功:)</string>
+    <string name="main_feedback_failed">提交失败:(，请重试</string>
+    <string name="main_feedback_submit">提交</string>
+    
+    <string name="main_time_prompt_0">现在已经是深夜 </string>
+    <string name="main_time_prompt_1"> 点多了，建议您注意作息，减少熬夜:)</string>
+    
+    <string name="bookmarks_title">书签</string>
+    <string name="bookmarks_nobookmark">书签列表为空</string>
+    <string name="bookmarks_added">成功添加到书签</string>
+    
+    <string name="settings_title">设置</string>
+	<string name="settings_auto_load_title">推荐在WiFi环境下开启自动加载　　</string>
+	<string name="settings_auto_load_images">自动加载大图</string>
+	<string name="settings_auto_load_thumbs">自动加载缩略图</string>
+
+	<string name="about_title">关于 纸币图鉴</string>
+    <string name="about_ver">版本：</string>
+    <string name="about_body">『纸币图鉴』是一个移动纸币数据库应用，纸币数据、图片由世界纸钞网提供。\n应用官方微博：weibo.com/notelib\n获得更多纸币资讯，请访问：\n世界纸钞网：ybnotes.com\n\n本应用由fatlyz为世界纸钞网开发\n开发者网站：fatlyz.com\nemail:fatlyz.pub@gmail.com</string>
+    
+    <string name="notelist_newnotes">最新纸币</string>
+    
+    <string name="catalog_continent_asia">亚洲纸币</string>
+    <string name="catalog_continent_asia_sub">Asia</string>
+    <string name="catalog_continent_europe">欧洲纸币</string>
+    <string name="catalog_continent_europe_sub">Europe</string>
+    <string name="catalog_continent_africa">非洲纸币</string>
+    <string name="catalog_continent_africa_sub">Africa</string>
+    <string name="catalog_continent_americas">美洲纸币</string>
+    <string name="catalog_continent_americas_sub">Americas</string>
+    <string name="catalog_continent_oceania">大洋洲/其它纸币</string>
+    <string name="catalog_continent_oceania_sub">Oceania</string>
+
+    <string name="noteinfo_title">纸币信息</string>
+    <string name="noteinfo_notloaded"> </string>
+    <string name="noteinfo_noteinfo">概要</string>
+    <string name="noteinfo_notename">纸币名称</string>
+    <string name="noteinfo_country">国家</string>
+    <string name="noteinfo_issuer">[发行机构]</string>
+    <string name="noteinfo_catanum">目录编号</string>
+    <string name="noteinfo_denomination">面额</string>
+    <string name="noteinfo_edition">年版</string>
+    <string name="noteinfo_publish_date">发行日期</string>
+    <string name="noteinfo_printer">印刷商</string>
+    <string name="noteinfo_specs">规格</string>
+    <string name="noteinfo_description">注释</string>
+    <string name="noteinfo_picture">图片</string>
+    <string name="noteinfo_loadpicture">点击加载图片</string>
+    <string name="noteinfo_loadingpicture">加载中…</string>
+    <string name="noteinfo_loadpicturefailed">图片加载失败</string>
+    <string name="noteinfo_share_chooser">分享到：</string>
+    <string name="noteinfo_share_needimages">需先加载图片</string>
+    <string name="noteinfo_share_text">#纸币图鉴#我正在用@纸币图鉴 浏览：</string>
+    <string name="noteinfo_share_text2">。     纸币图鉴 收录世界223+个国家地区的纸币信息和高清图片，快来下载吧~ http://fatlyz.com/notelib</string>
+  
+
+</resources>
+
+
