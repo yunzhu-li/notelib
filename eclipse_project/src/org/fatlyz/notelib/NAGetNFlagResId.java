@@ -1,11 +1,30 @@
+//
+//  This file is part of NoteLib.
+//
+//  Copyright (c) 2012-2015 Yunzhu Li.
+//
+//  NoteLib is free software: you can redistribute it
+//  and/or modify it under the terms of the GNU General
+//  Public License version 3 as published by the Free
+//  Software Foundation.
+//
+//  NoteLib is distributed in the hope that it will be
+//  useful, but WITHOUT ANY WARRANTY; without even the
+//  implied warranty of MERCHANTABILITY or FITNESS FOR A
+//  PARTICULAR PURPOSE. See the GNU General Public License
+//  for more details.
+//
+//  You should have received a copy of the GNU General Public
+//  License along with NoteLib.
+//  If not, see http://www.gnu.org/licenses/.
+//
+
 package org.fatlyz.notelib;
 
 public class NAGetNFlagResId {
 
 	public static int GetNFlagResId(int countryid)
 	{
-
-		
 		int[] nflist = {
 				R.drawable.z_ic_nf_afghanistan, 
 				R.drawable.z_ic_nf_albania, 
@@ -49,7 +68,7 @@ public class NAGetNFlagResId {
 				R.drawable.z_ic_nf_china, 
 				R.drawable.z_ic_nf_china_hongkong, 
 				R.drawable.z_ic_nf_china_macao, 
-				R.drawable.z_ic_nf_china,
+				R.drawable.z_ic_nf_taiwan,
 				R.drawable.z_ic_nf_colombia, 
 				R.drawable.z_ic_nf_comoros, 
 				R.drawable.z_ic_nf_congo, 
@@ -244,19 +263,9 @@ public class NAGetNFlagResId {
 				R.drawable.z_ic_nf_antarctica
 		};
 		
-		
-		
 		if(countryid > 235){
 			return (R.drawable.z_ic_nf_0noimage);
 		}
-		
 		return (nflist[countryid - 1]);
-		
-		
-		
-		
-	}//GetNFlagResId
-	
-	
-	
+	}
 }

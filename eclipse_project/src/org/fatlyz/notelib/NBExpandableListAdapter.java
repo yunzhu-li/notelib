@@ -1,3 +1,24 @@
+//
+//  This file is part of NoteLib.
+//
+//  Copyright (c) 2012-2015 Yunzhu Li.
+//
+//  NoteLib is free software: you can redistribute it
+//  and/or modify it under the terms of the GNU General
+//  Public License version 3 as published by the Free
+//  Software Foundation.
+//
+//  NoteLib is distributed in the hope that it will be
+//  useful, but WITHOUT ANY WARRANTY; without even the
+//  implied warranty of MERCHANTABILITY or FITNESS FOR A
+//  PARTICULAR PURPOSE. See the GNU General Public License
+//  for more details.
+//
+//  You should have received a copy of the GNU General Public
+//  License along with NoteLib.
+//  If not, see http://www.gnu.org/licenses/.
+//
+
 package org.fatlyz.notelib;
 
 import java.util.List;
@@ -13,166 +34,153 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class NBExpandableListAdapter extends BaseExpandableListAdapter {
-	//Members
-	private List<? extends Map<String, ?>> mGroupData;
-	private int mExpandedGroupLayout;
-	private int mCollapsedGroupLayout;
-	private String[] mGroupFrom;
-	private int[] mGroupTo;
+    // Members
+    private List<? extends Map<String, ?>> mGroupData;
+    private int mExpandedGroupLayout;
+    private int mCollapsedGroupLayout;
+    private String[] mGroupFrom;
+    private int[] mGroupTo;
 
-	private List<? extends List<? extends Map<String, ?>>> mChildData;
-	private int mChildLayout;
-	private int mLastChildLayout;
-	private String[] mChildFrom;
-	private int[] mChildTo;
+    private List<? extends List<? extends Map<String, ?>>> mChildData;
+    private int mChildLayout;
+    private int mLastChildLayout;
+    private String[] mChildFrom;
+    private int[] mChildTo;
 
-	private LayoutInflater mInflater;
+    private LayoutInflater mInflater;
 
+    public NBExpandableListAdapter(Context context, List<? extends Map<String, ?>> groupData, int groupLayout, String[] groupFrom, int[] groupTo,
+            List<? extends List<? extends Map<String, ?>>> childData, int childLayout, String[] childFrom, int[] childTo) {
+        this(context, groupData, groupLayout, groupLayout, groupFrom, groupTo, childData, childLayout, childLayout, childFrom, childTo);
+    }
 
-	public NBExpandableListAdapter(Context context, List<? extends Map<String, ?>> groupData,
-			int groupLayout, String[] groupFrom, int[] groupTo,
-			List<? extends List<? extends Map<String, ?>>> childData, int childLayout,
-			String[] childFrom, int[] childTo) {
-		this(context, groupData, groupLayout, groupLayout, groupFrom, groupTo, childData,
-				childLayout, childLayout, childFrom, childTo);
-	}
+    public NBExpandableListAdapter(Context context, List<? extends Map<String, ?>> groupData, int expandedGroupLayout, int collapsedGroupLayout,
+            String[] groupFrom, int[] groupTo, List<? extends List<? extends Map<String, ?>>> childData, int childLayout, String[] childFrom, int[] childTo) {
+        this(context, groupData, expandedGroupLayout, collapsedGroupLayout, groupFrom, groupTo, childData, childLayout, childLayout, childFrom, childTo);
+    }
 
-	public NBExpandableListAdapter(Context context, List<? extends Map<String, ?>> groupData,
-			int expandedGroupLayout, int collapsedGroupLayout, String[] groupFrom, int[] groupTo,
-			List<? extends List<? extends Map<String, ?>>> childData, int childLayout,
-			String[] childFrom, int[] childTo) {
-		this(context, groupData, expandedGroupLayout, collapsedGroupLayout, groupFrom, groupTo,
-				childData, childLayout, childLayout, childFrom, childTo);
-	}
+    public NBExpandableListAdapter(Context context, List<? extends Map<String, ?>> groupData, int expandedGroupLayout, int collapsedGroupLayout,
+            String[] groupFrom, int[] groupTo, List<? extends List<? extends Map<String, ?>>> childData, int childLayout, int lastChildLayout,
+            String[] childFrom, int[] childTo) {
+        mGroupData = groupData;
+        mExpandedGroupLayout = expandedGroupLayout;
+        mCollapsedGroupLayout = collapsedGroupLayout;
+        mGroupFrom = groupFrom;
+        mGroupTo = groupTo;
 
-	public NBExpandableListAdapter(Context context, List<? extends Map<String, ?>> groupData,
-			int expandedGroupLayout, int collapsedGroupLayout, String[] groupFrom, int[] groupTo,
-			List<? extends List<? extends Map<String, ?>>> childData, int childLayout,
-			int lastChildLayout, String[] childFrom, int[] childTo) {
-		mGroupData = groupData;
-		mExpandedGroupLayout = expandedGroupLayout;
-		mCollapsedGroupLayout = collapsedGroupLayout;
-		mGroupFrom = groupFrom;
-		mGroupTo = groupTo;
+        mChildData = childData;
+        mChildLayout = childLayout;
+        mLastChildLayout = lastChildLayout;
+        mChildFrom = childFrom;
+        mChildTo = childTo;
 
-		mChildData = childData;
-		mChildLayout = childLayout;
-		mLastChildLayout = lastChildLayout;
-		mChildFrom = childFrom;
-		mChildTo = childTo;
+        mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
 
-		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	}
+    public Object getChild(int groupPosition, int childPosition) {
+        return mChildData.get(groupPosition).get(childPosition);
+    }
 
-	public Object getChild(int groupPosition, int childPosition) {
-		return mChildData.get(groupPosition).get(childPosition);
-	}
+    public long getChildId(int groupPosition, int childPosition) {
+        return childPosition;
+    }
 
-	public long getChildId(int groupPosition, int childPosition) {
-		return childPosition;
-	}
+    /**
+     * Instantiates a new View for a child.
+     * 
+     * @param isLastChild
+     *            Whether the child is the last child within its group.
+     * @param parent
+     *            The eventual parent of this new View.
+     * @return A new child View
+     */
+    public View newChildView(boolean isLastChild, ViewGroup parent) {
+        return mInflater.inflate((isLastChild) ? mLastChildLayout : mChildLayout, parent, false);
+    }
 
-	/**
-	 * Instantiates a new View for a child.
-	 * @param isLastChild Whether the child is the last child within its group.
-	 * @param parent The eventual parent of this new View.
-	 * @return A new child View
-	 */
-	public View newChildView(boolean isLastChild, ViewGroup parent) {
-		return mInflater.inflate((isLastChild) ? mLastChildLayout : mChildLayout, parent, false);
-	}
+    public int getChildrenCount(int groupPosition) {
+        return mChildData.get(groupPosition).size();
+    }
 
-	public int getChildrenCount(int groupPosition) {
-		return mChildData.get(groupPosition).size();
-	}
+    public Object getGroup(int groupPosition) {
+        return mGroupData.get(groupPosition);
+    }
 
-	public Object getGroup(int groupPosition) {
-		return mGroupData.get(groupPosition);
-	}
+    public int getGroupCount() {
+        return mGroupData.size();
+    }
 
-	public int getGroupCount() {
-		return mGroupData.size();
-	}
+    public long getGroupId(int groupPosition) {
+        return groupPosition;
+    }
 
-	public long getGroupId(int groupPosition) {
-		return groupPosition;
-	}
+    /**
+     * Instantiates a new View for a group.
+     * 
+     * @param isExpanded
+     *            Whether the group is currently expanded.
+     * @param parent
+     *            The eventual parent of this new View.
+     * @return A new group View
+     */
+    public View newGroupView(boolean isExpanded, ViewGroup parent) {
+        return mInflater.inflate((isExpanded) ? mExpandedGroupLayout : mCollapsedGroupLayout, parent, false);
+    }
 
-	/**
-	 * Instantiates a new View for a group.
-	 * @param isExpanded Whether the group is currently expanded.
-	 * @param parent The eventual parent of this new View.
-	 * @return A new group View
-	 */
-	public View newGroupView(boolean isExpanded, ViewGroup parent) {
-		return mInflater.inflate((isExpanded) ? mExpandedGroupLayout : mCollapsedGroupLayout,
-				parent, false);
-	}
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return true;
+    }
 
-	public boolean isChildSelectable(int groupPosition, int childPosition) {
-		return true;
-	}
+    public boolean hasStableIds() {
+        return true;
+    }
 
-	public boolean hasStableIds() {
-		return true;
-	}
+    private void bindView(View view, Map<String, ?> data, String[] from, int[] to) {
+        int len = to.length;
 
-	private void bindView(View view, Map<String, ?> data, String[] from, int[] to) {
-		   int len = to.length;
-		   
-		   for (int i = 0; i < len; i++) {
-			   View v = view.findViewById(to[i]);
-			   if (v != null) {
-				   if (v instanceof ImageView)
-				   {
-					   //if null
-					   if (data.get(from[i]) == null){
-						   ((ImageView)v).setImageDrawable(null);
-					   }else
-					   //if Bitmap
-					   if (data.get(from[i]) instanceof Bitmap)
-					   {
-						   ((ImageView)v).setImageBitmap((Bitmap) data.get(from[i]));
-					   //if ResID
-					   }else{
-						   ((ImageView)v).setImageResource((Integer) data.get(from[i]));
-					   }
-				   }else
-					   if (v instanceof TextView)
-					   {
-						   ((TextView)v).setText((String) data.get(from[i]));
-					   }
-			   }//if
-		   }//for
-	}
+        for (int i = 0; i < len; i++) {
+            View v = view.findViewById(to[i]);
+            if (v != null) {
+                if (v instanceof ImageView) {
+                    // if null
+                    if (data.get(from[i]) == null) {
+                        ((ImageView) v).setImageDrawable(null);
+                    } else
+                    // if Bitmap
+                    if (data.get(from[i]) instanceof Bitmap) {
+                        ((ImageView) v).setImageBitmap((Bitmap) data.get(from[i]));
+                        // if ResID
+                    } else {
+                        ((ImageView) v).setImageResource((Integer) data.get(from[i]));
+                    }
+                } else if (v instanceof TextView) {
+                    ((TextView) v).setText((String) data.get(from[i]));
+                }
+            }
+        }
+    }
 
-	public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
-			ViewGroup parent) {
-		View v;
-		if (convertView == null) {
-			v = newGroupView(isExpanded, parent);
-		} else {
-			v = convertView;
-		}
-		
-		bindView(v, mGroupData.get(groupPosition), mGroupFrom, mGroupTo);
-		return v;
-	}
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+        View v;
+        if (convertView == null) {
+            v = newGroupView(isExpanded, parent);
+        } else {
+            v = convertView;
+        }
 
-	public View getChildView(int groupPosition, int childPosition, boolean isLastChild,
-			View convertView, ViewGroup parent) {
-		View v;
-		if (convertView == null) {
-			v = newChildView(isLastChild, parent);
-		} else {
-			v = convertView;
-		}
+        bindView(v, mGroupData.get(groupPosition), mGroupFrom, mGroupTo);
+        return v;
+    }
 
+    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+        View v;
+        if (convertView == null) {
+            v = newChildView(isLastChild, parent);
+        } else {
+            v = convertView;
+        }
 
-		bindView(v, mChildData.get(groupPosition).get(childPosition), mChildFrom, mChildTo);
-		return v;
-	}
-
-	
-	
+        bindView(v, mChildData.get(groupPosition).get(childPosition), mChildFrom, mChildTo);
+        return v;
+    }
 }

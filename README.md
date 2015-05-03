@@ -1,7 +1,7 @@
-NoteLib-Android
+NoteLib
 ===============
 
 ##### NoteLib for Android
-##### http://fatlyz.com/notelib
-##### http://fatlyz.com
-##### http://weibo.com/fatlyz
+##### A collection of information of world banknotes.
+##### https://yunzhu.li/apps/notelib
+##### https://yunzhu.li/
